@@ -31,3 +31,12 @@ _**Description**_: A route to person/name. Other route to login with two HTTP GE
 *URL 3*: http://localhost:5003/person/robert/age/36              
 *improvement* returning JSON data.     
 
+### hello.py
+-----
+_**Description**_: Adds a route to return JSON format data.    
+*command*: python hello.py     
+*URL 1*: http://localhost:5003/person/mary     
+*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
+*URL 3*: http://localhost:5003/person/robert/age/36              
+*URL 4*: curl -H 'Accept: application/json' -X GET http://localhost:5003/advices
+
