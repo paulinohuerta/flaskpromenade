@@ -31,38 +31,13 @@ The easiest way to do this is with the _git reset_ command
 # Scripts
 -----
 
-## The first
+## Using Templates
 
 ### hello.py
 -----
-_**Description**_: Launches the flask integrated web server.     
+_**Description**_: Jinja2 templates. Moving the presentation logic into templates helps improve the maintainability of the application.     
 *command*: python hello.py     
-*URL*: http://localhost:5003/     
-*improvement* getting a personalized salutation   
-
-### hello.py
------
-_**Description**_: A route to person/name. Other route to login with two HTTP GET parameters _username_ and _password_       
-*command*: python hello.py     
-*URL 1*: http://localhost:5003/person/mary     
-*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*improvement* using Flask’s built-in URL converters.     
-
-### hello.py
------
-_**Description**_: A route to person/name. Other route to login with two HTTP GET parameters _username_ and _password_. Using [URL built-in converters](http://exploreflask.com/en/latest/views.html#url-converters).       
-*command*: python hello.py     
-*URL 1*: http://localhost:5003/person/mary     
-*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*URL 3*: http://localhost:5003/person/robert/age/36              
-*improvement* returning JSON data.     
-
-### hello.py
------
-_**Description**_: Adds a route to return JSON format data.    
-*command*: python hello.py     
-*URL 1*: http://localhost:5003/person/mary     
-*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*URL 3*: http://localhost:5003/person/robert/age/36              
-*URL 4*: curl -H 'Accept: application/json' -X GET http://localhost:5003/advices
+*URL 1*: http://localhost:5003/index.html     
+*URL 2*: http://localhost:5003/person/robert    
+*improvement*: Jinja2 recognizes variables of any type, lists, dictionaries and objects. Applying filters on the variables.
 
