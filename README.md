@@ -37,7 +37,7 @@ The easiest way to do this is with the _git reset_ command
 -----
 _**Description**_: Jinja2 templates. Moving the presentation logic into templates helps improve the maintainability of the application.     
 *command*: python hello.py     
-*URL 1*: http://localhost:5003/index.html     
+*URL 1*: http://localhost:5003/index    
 *URL 2*: http://localhost:5003/person/robert    
 *improvement*: Jinja2 recognizes variables of any type, lists, dictionaries and objects. Applying filters on the variables.
 
