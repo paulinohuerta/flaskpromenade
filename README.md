@@ -31,13 +31,11 @@ The easiest way to do this is with the _git reset_ command
 # Scripts
 -----
 
-## Using Templates
+## Getting redis data
 
 ### hello.py
 -----
-_**Description**_: Jinja2 templates. Moving the presentation logic into templates helps improve the maintainability of the application.     
+_**Description**_: Moving the presentation logic into templates; We take advantage to introduce data acquisition from external sources, this time we get the members of a set structure of the server redis.     
 *command*: python hello.py     
-*URL 1*: http://localhost:5003/index    
-*URL 2*: http://localhost:5003/person/robert    
-*improvement*: Jinja2 recognizes variables of any type, lists, dictionaries and objects. Applying filters on the variables.
-
+*URL*: http://localhost:5003/index    
+*improvement*: Twitter Bootstrap integration mediante flask-bootstrap       
