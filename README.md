@@ -35,7 +35,8 @@ The easiest way to do this is with the _git reset_ command
 
 ### hello.py
 -----
-_**Description**_: Moving the presentation logic into templates; We take advantage to introduce data acquisition from external sources, this time we get the members of a set structure of the server redis.     
+_*Description**_: Flask-Bootstrap is initialized by passing the application instance in the constructor. The application extends a base template. Template inheritance allows you to build a base _skeleton_ template that contains all the common elements of your site.           
 *command*: python hello.py     
-*URL*: http://localhost:5003/index    
-*improvement*: Twitter Bootstrap integration mediante flask-bootstrap       
+*URL 1*: http://localhost:5003/index    
+*URL 2*: http://localhost:5003/person/margaret           
+*improvement*: getting data from MySQL server.       
