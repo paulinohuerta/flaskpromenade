@@ -31,7 +31,7 @@ The easiest way to do this is with the _git reset_ command
 # Scripts
 -----
 
-## Getting redis data
+## Using Flask-Bootstrap
 
 ### hello.py
 -----
