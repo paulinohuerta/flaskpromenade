@@ -31,11 +31,12 @@ The easiest way to do this is with the _git reset_ command
 # Scripts
 -----
 
-## Connecting Flask MySQL
+## Flask sessions
 
 ### hello.py
 -----
-_**Description**_: We need to install the extension Flask-MySQL. Connecting to the database, we get the result of a SQL select statement, and we allow the POST of a form destined to generate a new record, which we only show that the data of the request have been received correctly.      
+_**Description**_: A session with each client is assigned a Session ID. The Session data is stored on top of cookies and the server signs them cryptographically. For this encryption, a Flask application needs a defined SECRET KEY. Session object is a dictionary object containing key-value pairs of session variables
+and associated values.      
 *command*: python hello.py     
 *URL 1*: http://localhost:5003/index    
-*improvement*: adding use of session variables, into this application.     
+*improvement*: Using flask-restful. Creating a simple application where the user would be able to register, through an incipient REST API.     
