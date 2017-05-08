@@ -31,12 +31,11 @@ The easiest way to do this is with the _git reset_ command
 # Scripts
 -----
 
-## Using Flask-Bootstrap
+## Connecting Flask MySQL
 
 ### hello.py
 -----
-_*Description**_: Flask-Bootstrap is initialized by passing the application instance in the constructor. The application extends a base template. Template inheritance allows you to build a base _skeleton_ template that contains all the common elements of your site.           
+_**Description**_: We need to install the extension Flask-MySQL. Connecting to the database, we get the result of a SQL select statement, and we allow the POST of a form destined to generate a new record, which we only show that the data of the request have been received correctly.      
 *command*: python hello.py     
 *URL 1*: http://localhost:5003/index    
-*URL 2*: http://localhost:5003/person/margaret           
-*improvement*: getting data from MySQL server.       
+*improvement*: adding use of session variables, into this application.     
