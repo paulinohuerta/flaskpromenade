@@ -27,6 +27,17 @@ The easiest way to do this is with the _git reset_ command
 
     $ git reset --hard
 
+#### Flask extensions or python packages that you should install
+
+Well you should install using the pip command
+
+    $ pip install <name_ext>
+
+* redis
+* flask
+* flask-bootstrap
+* flask-mysql
+* flask-restful
 
 # Scripts
 -----
@@ -36,6 +47,6 @@ The easiest way to do this is with the _git reset_ command
 ### api.py
 -----
 _**Description**_: We create an initial CreateUser API.         
-*command*: python api.py
+*command*: python api.py      
 *client test*: curl -v -X POST  -H 'Content-Type: application/json' -d '{"email":"pauli@yahoo.es","password":"xxpassxx"}' http://localhost:5003/CreateUser    
 *improvement*: 
