@@ -1,0 +1,8 @@
+<title>Flaskpromenade</title>
+<h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+<form method="POST">
+{{ form.csrf_token }}
+{{ form.name.label }} {{ form.name() }}
+{{ form.submit() }}
+</form>
+

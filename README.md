@@ -38,15 +38,17 @@ Well you should install using the pip command
 * flask-bootstrap
 * flask-mysql
 * flask-restful
+* flask-wtf
 
 # Scripts
 -----
 
-## Flask REST
+## Flask WTF
 
-### api.py
+### hello.py
 -----
-_**Description**_: We create an initial CreateUser API.         
-*command*: python api.py      
-*client test*: curl -v -X POST  -H 'Content-Type: application/json' -d '{"email":"pauli@yahoo.es","password":"xxpassxx"}' http://localhost:5003/CreateUser    
-*improvement*: 
+_**Description**_: A first use of WTF. Creating Forms using FlaskForm.     
+FlaskForm will be a session secure form with csrf protection. Our script renders the form or pocesses the data received.
+*command*: python hello.py       
+*URL*: http://localhost:5003/        
+*improvement*: Notify the user of the required field. Use bootstrap.    
