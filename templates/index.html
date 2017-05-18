@@ -1,8 +1,11 @@
-<title>Flaskpromenade</title>
-<h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-<form method="POST">
-{{ form.csrf_token }}
-{{ form.name.label }} {{ form.name() }}
-{{ form.submit() }}
-</form>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
+{% block title %}Flaskpromenade{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
