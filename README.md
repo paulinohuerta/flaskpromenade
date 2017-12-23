@@ -44,7 +44,7 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Flask WTF
+## The first project
 
 ### hello.py
 -----
