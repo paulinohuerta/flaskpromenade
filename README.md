@@ -48,8 +48,7 @@ Well you should install using the pip command
 
 ### hello.py
 -----
-_**Description**_: Flask-Bootstrap provides a higth-level of funcionality that renders an entire "Flask-WTF form". When importing *bootstrap/wtf.html* file are defined template elements  and helper functions such as wtf.quick\_form() function, this function takes a flask-wtf object and renders it using default Bootstrp styles.     
-Note: This example is based on the example used by Miguel Grinberg in his book "Flask Web development" published by O'Reilly Publishing.   
-*command*: python hello.py       
-*URL*: http://localhost:5003/        
-*improvement*:
+_**Description**_: Launches the flask integrated web server.     
+*command*: python hello.py     
+*URL*: http://localhost:5003/    
+*improvement*: getting a personalized salutation   
