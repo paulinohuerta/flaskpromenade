@@ -44,14 +44,12 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Returning JSON format data
+## Adding routes
 
 ### hello.py
 -----
-_**Description**_: Adds a route to return JSON format data.      
+_**Description**_: A route to person/name. Other route to login with two HTTP GET parameters _username_ and _password._       
 *command*: python hello.py     
 *URL 1*: http://localhost:5003/person/mary     
 *URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*URL 3*: http://localhost:5003/person/robert/age/36              
-*URL 4*: curl -H 'Accept: application/json' -X GET http://localhost:5003/advices    
-*improvement*: Moving the presentation logic into templates.    
+*improvement*: using Flask’s built-in URL converters.     
