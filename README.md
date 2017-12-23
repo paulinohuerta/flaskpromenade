@@ -44,12 +44,11 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Adding routes
+## The first project
 
 ### hello.py
 -----
-_**Description**_: A route to person/name. Other route to login with two HTTP GET parameters _username_ and _password._       
+_**Description**_: Launches the flask integrated web server.     
 *command*: python hello.py     
-*URL 1*: http://localhost:5003/person/mary     
-*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*improvement*: using Flask’s built-in URL converters.     
+*URL*: http://localhost:5003/    
+*improvement*: getting a personalized salutation    
