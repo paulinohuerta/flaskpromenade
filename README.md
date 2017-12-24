@@ -44,13 +44,13 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Using URL built-in converters
+## Using Templates (2)
 
 ### hello.py
 -----
-_**Description**_: A route to person/name. Other route to login with two HTTP GET parameters _username_ and _password._Using [URL built-in converters](http://exploreflask.com/en/latest/views.html#url-converters).            
+_**Description**_: Jinja2 templates. Moving the presentation logic into templates helps improve the maintainability of the application.     
 *command*: python hello.py     
-*URL 1*: http://localhost:5003/person/mary     
-*URL 2*: http://localhost:5003/login?username=paolo&password=thehidden      
-*URL 3*: http://localhost:5003/person/robert/age/36              
-*improvement*: returning JSON data.     
+*URL 1*: http://localhost:5003/index    
+*URL 2*: http://localhost:5003/person/robert    
+*URL 3*: http://localhost:5003/advices    
+*improvement*: Getting data from Redis Server.    
