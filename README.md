@@ -44,12 +44,12 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Flask WTF
+## Flask REST
 
-### hello.py
+### api.py
 -----
-_**Description**_: Flask-Bootstrap provides a higth-level of funcionality that renders an entire "Flask-WTF form". When importing *bootstrap/wtf.html* file are defined template elements  and helper functions such as wtf.quick\_form() function, this function takes a flask-wtf object and renders it using default Bootstrp styles.     
-Note: This example is based on the example used by Miguel Grinberg in his book "Flask Web development" published by O'Reilly Publishing.   
-*command*: python hello.py       
-*URL*: http://localhost:5003/        
-*improvement*: Using flask-restful. Creating a simple application where the user would be able to register, through an incipient REST API.    
+_**Description**_: We create an initial CreateUser API.         
+*command*: python api.py    
+*client test*: curl -v -X POST  -H 'Content-Type: application/json' -d '{"email":"pauli@yahoo.es","password":"xxpassxx"}' http://localhost:5003/CreateUser    
+*improvement*: Using the Flask-Login module for to allow some login funcionality.         
+
