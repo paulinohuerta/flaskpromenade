@@ -44,13 +44,12 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Using Templates (2)
+## Flask WTF
 
 ### hello.py
 -----
-_**Description**_: Jinja2 templates. Moving the presentation logic into templates helps improve the maintainability of the application.     
-*command*: python hello.py     
-*URL 1*: http://localhost:5003/index    
-*URL 2*: http://localhost:5003/person/robert    
-*URL 3*: http://localhost:5003/advices    
-*improvement*: Getting data from Redis Server.    
+_**Description**_: Flask-Bootstrap provides a higth-level of funcionality that renders an entire "Flask-WTF form". When importing *bootstrap/wtf.html* file are defined template elements  and helper functions such as wtf.quick\_form() function, this function takes a flask-wtf object and renders it using default Bootstrp styles.     
+Note: This example is based on the example used by Miguel Grinberg in his book "Flask Web development" published by O'Reilly Publishing.   
+*command*: python hello.py       
+*URL*: http://localhost:5003/        
+*improvement*: Using flask-restful. Creating a simple application where the user would be able to register, through an incipient REST API.    

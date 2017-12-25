@@ -1,23 +1,33 @@
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
+from flask_moment import Moment
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import Required
+
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'hard to guess string'
 
-@app.route('/')
+bootstrap = Bootstrap(app)
+moment = Moment(app)
+
+class NameForm(FlaskForm):
+    name = StringField('What is your name?', validators=[Required()])
+    submit = SubmitField('Submit')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
-
-@app.route('/person/<name>')
-def person(name):
-    return render_template('person.html',a_name=name)
-
-@app.route('/advices')
-def advices():
-    data = [
-       'Always finish what you started',
-       'Do what you\'re doing your best',
-       'Do not cling to anything that will eventually destroy you'
-    ]
-    return render_template('advices.html', comments=data)
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+    return render_template('index.html', form=form, name=name)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5003,debug=True)
+    app.run(port=5003,debug=True)
 
