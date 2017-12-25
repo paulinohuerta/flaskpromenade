@@ -44,12 +44,12 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Flask REST
+## Flask sessions
 
-### api.py
+### hello.py
 -----
-_**Description**_: We create an initial CreateUser API.         
-*command*: python api.py    
-*client test*: curl -v -X POST  -H 'Content-Type: application/json' -d '{"email":"pauli@yahoo.es","password":"xxpassxx"}' http://localhost:5003/CreateUser    
-*improvement*: Using the Flask-Login module for to allow some login funcionality.         
-
+_**Description**_: A session with each client is assigned a Session ID. The Session data is stored on top of cookies and the server signs them cryptographically. For this encryption, a Flask application needs a defined SECRET KEY. Session object is a dictionary object containing key-value pairs of session variables
+and associated values.      
+*command*: python hello.py     
+*URL 1*: http://localhost:5003/index    
+*improvement*: Creating Forms using FlaskForm.  
