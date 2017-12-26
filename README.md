@@ -40,16 +40,17 @@ Well you should install using the pip command
 * flask-restful
 * flask-wtf
 * flask-moment
+* flask-login
 
 # Scripts
 -----
 
-## Flask sessions
+## Flask Login (using Bootstrap template)
 
-### hello.py
+### app.py
 -----
-_**Description**_: A session with each client is assigned a Session ID. The Session data is stored on top of cookies and the server signs them cryptographically. For this encryption, a Flask application needs a defined SECRET KEY. Session object is a dictionary object containing key-value pairs of session variables
-and associated values.      
-*command*: python hello.py     
-*URL 1*: http://localhost:5003/index    
-*improvement*: Creating Forms using FlaskForm.  
+_**Description**_: Our application will display `You are logged in` for users who have authenticated, but users who do not enter a correct password will not be able to see the message. Using a MockDBHelper class to test our application and don't have access to the database. We also need the request library. We will pass our `User` object to the Flask-Login module. The template file we'll work with can be seen at http://getbootstrap.com/examples/jumbotron/     
+*command*: python app.py       
+*URL 1*: http://localhost:5003    
+*URL 2*: http://localhost:5003/account        
+*improvement*:     
