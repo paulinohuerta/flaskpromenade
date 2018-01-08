@@ -41,16 +41,16 @@ Well you should install using the pip command
 * flask-wtf
 * flask-moment
 * flask-login
+* flask-sqlalchemy
 
 # Scripts
 -----
 
-## Flask Login (using Bootstrap template)
+## Models with SQLAlchemy
 
-### app.py
+### The first model
 -----
-_**Description**_: Our application will display `You are logged in` for users who have authenticated, but users who do not enter a correct password will not be able to see the message. Using a MockDBHelper class to test our application and don't have access to the database. We also need the request library. We will pass our `User` object to the Flask-Login module. The template file we'll work with can be seen at http://getbootstrap.com/examples/jumbotron/     
-*command*: python app.py       
-*URL 1*: http://localhost:5003    
-*URL 2*: http://localhost:5003/account        
-*improvement*:     
+_**Description**_: We use the `MySQL driver` for this app, our database on the server is `usuario_db`, and we work on the `user table`, which is already created and stores some user data. SQLAlchemy must first be initialized with our app, will read our app's configuration and automatically connect to our database. We have created a `User model` to interact with a user table. We have also introduced as a new element in our study of the framework, a structure modular of our application, the users/run.py has the minimun code to start the app, while the users/my\_app/\_\_init\_\_.py contains the rest. Respecting this structure, soon, we will separate the models and views giving rise to new modules.     
+*command*: python run.py       
+*URL 1*: http://localhost:5300      
+*improvement*: Templates and inheritance.     
