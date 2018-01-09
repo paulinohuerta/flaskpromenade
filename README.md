@@ -46,11 +46,21 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Models with SQLAlchemy
+## REST API interface (using SQLAlchemy for the model)
 
-### The first model
+### Completing the API of a previous chapter
 -----
-_**Description**_: We use the `MySQL driver` for this app, our database on the server is `usuario_db`, and we work on the `user table`, which is already created and stores some user data. SQLAlchemy must first be initialized with our app, will read our app's configuration and automatically connect to our database. We have created a `User model` to interact with a user table. We have also introduced as a new element in our study of the framework, a structure modular of our application, the users/run.py has the minimun code to start the app, while the users/my\_app/\_\_init\_\_.py contains the rest. Respecting this structure, soon, we will separate the models and views giving rise to new modules.     
+_**Description**_: We use the `MySQL driver` for this app, our database on the server is `catalog_db`, and we work on the `product table` and `category table`, which are already created and stores some data.      
+We use `Blueprints` in order to distribute the code in different files, considering then, that our application will consist of several modules.      
+We use SQLAlchemy fas an `ORM` of our relational model; we want to have product categories where each category can have multiple products, but each product should have at least one category.    
+See below the mapping according to "REST" that we propose in our interface.    
+Our API is inside the views.py, there you find code commented on each of the methods; it is interesting, initially to test the application only with that code, for example that the `get function` only had the line of code `return 'This is a GET response'`.        
 *command*: python run.py       
-*URL 1*: http://localhost:5300      
-*improvement*: Templates and inheritance.     
+*URL 1*: http://localhost:5300/api             
+*Mapping our API*:       
+GET /api/products/1 : This gets the product with ID 1      
+GET /api/products : This gets the list of products      
+POST /api/products : This creates a new product     
+PUT /api/products/1 : This updates the product with ID 1     
+DELETE /api/products/1 : This deletes the product with ID 1     
+*improvement*: Using flask-admin.     
