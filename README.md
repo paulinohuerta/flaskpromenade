@@ -58,9 +58,9 @@ Our API is inside the views.py, there you find code commented on each of the met
 *command*: python run.py       
 *URL 1*: http://localhost:5300/api             
 *Mapping our API*:       
-GET /api/products/1 : This gets the product with ID 1      
-GET /api/products : This gets the list of products      
-POST /api/products : This creates a new product     
-PUT /api/products/1 : This updates the product with ID 1     
-DELETE /api/products/1 : This deletes the product with ID 1     
+GET /api/product/1 : This gets the product with ID 1      
+GET /api/product : This gets the list of products      
+POST /api/product : This creates a new product     
+PUT /api/product/1 : This updates the product with ID 1     
+DELETE /api/product/1 : This deletes the product with ID 1     
 *improvement*: Using flask-admin.     
