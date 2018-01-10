@@ -42,25 +42,16 @@ Well you should install using the pip command
 * flask-moment
 * flask-login
 * flask-sqlalchemy
+* flask-admin
 
 # Scripts
 -----
 
-## REST API interface (using SQLAlchemy for the model)
+## 
 
-### Completing the API of a previous chapter
+### 
 -----
-_**Description**_: We use the `MySQL driver` for this app, our database on the server is `catalog_db`, and we work on the `product table` and `category table`, which are already created and stores some data.      
-We use `Blueprints` in order to distribute the code in different files, considering then, that our application will consist of several modules.      
-We use SQLAlchemy fas an `ORM` of our relational model; we want to have product categories where each category can have multiple products, but each product should have at least one category.    
-See below the mapping according to "REST" that we propose in our interface.    
-Our API is inside the views.py, there you find code commented on each of the methods; it is interesting, initially to test the application only with that code, for example that the `get function` only had the line of code `return 'This is a GET response'`.        
+_**Description**_: 
 *command*: python run.py       
-*URL 1*: http://localhost:5300/api             
-*Mapping our API*:       
-GET /api/product/1 : This gets the product with ID 1      
-GET /api/product : This gets the list of products      
-POST /api/product : This creates a new product     
-PUT /api/product/1 : This updates the product with ID 1     
-DELETE /api/product/1 : This deletes the product with ID 1     
-*improvement*: Using flask-admin.     
+*URL 1*: http://localhost:5300/admin
+*improvement*: 
