@@ -48,19 +48,17 @@ Well you should install using the pip command
 # Scripts
 -----
 
-## Using flask-admin
+## Templates and inheritance
 
-### Registering models with Flask-Admin
+### Using Bootstrap framework, block composition and layout inheritance
 -----
-_**Description**_: Flask-Admin extension was created to easily create administrator interfaces.     
-Flask Admin works by registering view classes on the admin object that define one or more routes.     
-We have imported ModelView from flask.ext.admin.contrib.sqla, which is provided by Flask-Admin to integrate SQLAlchemy models then, we have managed to create a simple interface "CRUD" that will allow the admin users to perform these operations on the records that other normal users generally can't.    
-We should implement authentication as we did in a previous stage of our project through the extension `flask-login`.     
-In short, in this application we have implemented admin views for our existing models with the facilities to perform CRUD operations.    
-Additionally, we have added an own view, to do so we define a new class as a new view that inherits from `BaseView class`; after this, we will need to add this view to our admin object in the Flask configuration.    
-In this example we do not need to customize the default behavior of Flask-Admin; for example, if we had created a user, we would be interested in hiding the user's password in the views.    
-The database that stores our data is `postgresql`, then so we need the library `psycopg2` implemented in C as a `libpq` wrapper.    
+_**Description**_: To keep our templates DRY (Don't Repeat Yourself), we will use one of the most powerful features of Jinja, template inheritance.     
+We need a basic HTML skeleton: `base.html`; The `block control` is used in inheritance to mark sections to be replaceable by the child template.     
+The rest of the pages inherit from base.html. Then the `home page` template and `user.html` will use all the HTML base.html but replace the data in the `container block`.     
+Template inheritance is when a child template can import a base template as a starting point and only replace marked sections in the base.    
+In the code you will see that it has been commented as it would be the `SQLALCHEMY_DATABASE_URI` in the case that our data reside in a progresql database, in addition it is also commented in the model as it would be if the name of the class does not correspond with the name of the table, this is through `\_\_tablename\_\_`.    
+`Jinja2` maintains a notion that the processing of logic should be handled in views and not in templates, and thus, it keeps the templates clean. We use a `context processor` to pass our values to a method; this will then be processed in a Python method, and our resultant value will be returned.     
 *command*: python run.py       
-*URL 1*: http://localhost:5300/admin     
-*improvement*: Flask-Caching.    
+*URL 1*: http://localhost:5300     
+*improvement*: Completing the REST API, using SQLAlchemy for the model.    
 
