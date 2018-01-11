@@ -43,15 +43,24 @@ Well you should install using the pip command
 * flask-login
 * flask-sqlalchemy
 * flask-admin
+* psycopg2
 
 # Scripts
 -----
 
-## 
+## Using flask-admin
 
-### 
+### Registering models with Flask-Admin
 -----
-_**Description**_: 
+_**Description**_: Flask-Admin extension was created to easily create administrator interfaces.     
+Flask Admin works by registering view classes on the admin object that define one or more routes.     
+We have imported ModelView from flask.ext.admin.contrib.sqla, which is provided by Flask-Admin to integrate SQLAlchemy models then, we have managed to create a simple interface "CRUD" that will allow the admin users to perform these operations on the records that other normal users generally can't.    
+We should implement authentication as we did in a previous stage of our project through the extension `flask-login`.     
+In short, in this application we have implemented admin views for our existing models with the facilities to perform CRUD operations.    
+Additionally, we have added an own view, to do so we define a new class as a new view that inherits from `BaseView class`; after this, we will need to add this view to our admin object in the Flask configuration.    
+In this example we do not need to customize the default behavior of Flask-Admin; for example, if we had created a user, we would be interested in hiding the user's password in the views.    
+The database that stores our data is `postgresql`, then so we need the library `psycopg2` implemented in C as a `libpq` wrapper.    
 *command*: python run.py       
-*URL 1*: http://localhost:5300/admin
-*improvement*: 
+*URL 1*: http://localhost:5300/admin     
+*improvement*: Flask-Caching.    
+
